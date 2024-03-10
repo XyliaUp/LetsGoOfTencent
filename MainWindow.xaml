@@ -1,0 +1,34 @@
+﻿<Window x:Class="SMZX.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+        xmlns:WebView="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf" 
+        Title="元梦之星" Height="750" Width="536">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+
+			<Button Content="登录" Click="Login_Click"/>
+			<Button Grid.Row="1" Grid.Column="0" Content="领取第1个" Click="Gift1_Click" />
+			<Button Grid.Row="1" Grid.Column="1" Content="领取第2个" Click="Gift2_Click" />
+			<Button Grid.Row="1" Grid.Column="2" Content="停止领取" Click="StopGift_Click"/>
+		</Grid>
+
+		<WebView:WebView2 x:Name="WebView" Grid.Row="1" Width="500" Height="700" />
+	</Grid>
+</Window>
